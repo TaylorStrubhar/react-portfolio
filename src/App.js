@@ -15,7 +15,7 @@ function App() {
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
-  const [contactSelected, setContactSelected] = useState(false);
+  const [aboutSelected, setAboutSelected] = useState(false);
 
   return (
     <div>
@@ -24,12 +24,12 @@ function App() {
                     categories={categories}
                     setCurrentCategory={setCurrentCategory}
                     currentCategory={currentCategory}
-                    contactSelected={contactSelected}
-                    setContactSelected={setContactSelected}
+                    aboutSelected={aboutSelected}
+                    setAboutSelected={setAboutSelected}
             ></Nav>
         </div>
       <main>
-        {!contactSelected ? (
+        {!aboutSelected ? (
           <>
             <Project currentCategory={currentCategory}></Project>
             <About></About>
